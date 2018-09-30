@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 30 21:18:52 2018
+
+@author: taeke
+"""
+
+import pandas as pd
+# import googlefinance.client as gf
+from googlefinance.client import get_price_data, get_prices_data, get_prices_time_data
+ 
+param = {'q': 'FB','i': "86400",'x': "NASD",'P': "3M"}
+df = pd.DataFrame(get_price_data(param))
+print(df)
